@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+
+    <script>    
+        const cars = ["Volvo", "Dodge Charger", "Toyota Corola"];
+        cars.forEach(myFunction);
+
+        //Trying forEach loop
+        function myFunction(item, index){
+            console.log(index + ". " + item);
+        }
+        
+        document.getElementById("demo").innerHTML = cars;
+
+
+    
+    
+    
+    </script>
+</body>
+</html>
