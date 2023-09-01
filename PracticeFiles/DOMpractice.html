@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        THE TITLE OF YOUR WEBPAGE
+    </h1>
+      <div id="container">
+          <div class="content">
+          This is the glorious text-content!
+        </div>
+      </div>
+      
+      <script>
+        const content = document.querySelector(".content");
+
+        //a <p> with red text that says “Hey I’m red!”
+        const newParagraph = document.createElement("p");
+        newParagraph.innerHTML = "Hey I'm red!";
+        newParagraph.style.color = "red";
+        
+        content.appendChild(newParagraph);
+
+        //an <h3> with blue text that says “I’m a blue h3!”
+        const newHeader = document.createElement("h3");
+        newHeader.innerHTML = "I'm a blue h3!";
+        newHeader.style.color = "blue";
+
+        content.appendChild(newHeader);
+
+        //a <div> with a black border and pink background color with the following elements inside of it: another <h1> that says “I’m in a div”
+        const newDiv = document.createElement("div");
+
+        newDiv.setAttribute("id","divTest");
+        newDiv.style.border = "1px solid black";
+        newDiv.style.backgroundColor = "pink";
+
+        const h1Element = document.createElement("h1");
+        h1Element.textContent = "I'm in a div";
+
+        const newDivParagraph = document.createElement("p");
+        newDivParagraph.textContent = "ME TOO!";
+
+        content.appendChild(newDiv);
+        newDiv.appendChild(h1Element);
+        newDiv.appendChild(newDivParagraph);
+        //a <p> that says “ME TOO!”
+        
+
+       
+        
+      </script>   
+</body>
+</html>
+
+<!-- 
+    a <p> with red text that says “Hey I’m red!”
+    an <h3> with blue text that says “I’m a blue h3!”
+    a <div> with a black border and pink background color with the following elements inside of it:
+    another <h1> that says “I’m in a div”
+    a <p> that says “ME TOO!”
+    Hint for this one: after creating the <div> with createElement, append the <h1> and <p> to it before adding it to the container. 
+-->
